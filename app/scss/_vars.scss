@@ -1,3 +1,6 @@
+$accent: #fcd7b6;
+$title: #234969;
+
 %rubik-400 {
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
@@ -15,10 +18,17 @@
 
 %dms-500 {
   font-family: 'DMSans-Medium', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 %dms-700 {
   font-family: 'DMSans-Bold', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{a}n(#{$numbers});
 }
