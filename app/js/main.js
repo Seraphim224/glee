@@ -7,12 +7,21 @@ $(function () {
     fade: true
   });
 
-  var mixer = mixitup('.product-week__content');
+  var containerEl1 = document.querySelector('[data-ref="container-1"]');
+  var containerEl2 = document.querySelector('[data-ref="container-2"]');
 
-  var mixer = mixitup('.design__content');
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
 
 });
 
 
 
 
+//  config
