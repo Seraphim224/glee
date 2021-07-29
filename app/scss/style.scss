@@ -668,6 +668,7 @@
 }
 
 .partners {
+  background-color: #fef7f0;
   &__inner {
     display: flex;
     justify-content: space-around;
@@ -893,6 +894,110 @@
     margin-left: 7px;
   }
 }
+
+.modal {
+  padding: 120px 0;
+  max-width: 470px;
+  margin: 0 auto;
+  &__label {
+    display: block;
+    margin-bottom: 27px;
+    font-size: 14px;
+    @extend %rubik-400;
+    color: #436372;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 0 15px;
+    height: 56px;
+  }
+  &__btn {
+    border: none;
+    background-color: #a3bbc8;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    @extend %rubik-400;
+    padding: 19px 5px;
+    margin: 35px 0;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f6f6f6;
+    margin-bottom: 30px;
+  }
+  &__error {
+    font-size: 14px;
+    @extend %rubik-400;
+    color: #436372;
+  }
+  &__registr {
+    text-align: center;
+    font-size: 14px;
+    @extend %rubik-400;
+    color: #436372;
+    margin-bottom: 25px;
+  }
+  &__registr-link {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border: 2px solid #a3bbc8;
+    font-size: 18px;
+    @extend %rubik-400;
+    color: #243f4d;
+  }
+}
+
+.information {
+  padding: 120px 0;
+  &__title {
+    color: #243f4d;
+    font-size: 24px;
+    line-height: 30px;
+    @extend %rubik-500;
+    margin-bottom: 26px;
+  }
+  &__text {
+    @extend %rubik-400;
+    color: #243f4d;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+  &__list {
+    margin-bottom: 50px;
+    list-style: none;
+    counter-reset: my-counter;
+  }
+  &__list-item {
+    counter-increment: my-counter;
+    @extend %rubik-400;
+    color: #243f4d;
+    line-height: 30px;
+    padding-left: 40px;
+    margin-bottom: 25px;
+    position: relative;
+    &::before {
+      content: '0' counter(my-counter) '.';
+      position: absolute;
+      left: 4px;
+    }
+    &:nth-child(n+10) {
+      &::before {
+      content: '0' counter(number);
+    }
+    }
+  }
+}
+
 
 
 
