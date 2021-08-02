@@ -2,6 +2,11 @@ $accent: #fcd7b6;
 $title: #234969;
 
 %rubik-400 {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+
+%rubik-400 {
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
 }
@@ -29,6 +34,14 @@ $title: #234969;
 %dms-700 {
   font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
 
 @function max($numbers...) {
