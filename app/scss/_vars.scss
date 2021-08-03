@@ -36,6 +36,11 @@ $title: #234969;
   font-weight: 700;
 }
 
+%nunito-700 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
 %checkbox-hidden {
   width: 1px;
   height: 1px;
@@ -50,3 +55,4 @@ $title: #234969;
 @function min($numbers...) {
   @return m#{a}n(#{$numbers});
 }
+

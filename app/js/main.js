@@ -1,5 +1,13 @@
 $(function () {
 
+  $('.detalis-tabs__top-item').on('click', function (e) {
+    e.preventDefault();
+    $('.detalis-tabs__top-item').removeClass('detalis-tabs__top-item--active');
+    $(this).addClass('detalis-tabs__top-item--active');
+
+    $('.detalis-tabs__content-item').removeClass('detalis-tabs__content-item--active');
+    $($(this).attr('href')).addClass('detalis-tabs__content-item--active');
+  });
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
@@ -19,6 +27,36 @@ $(function () {
     autoplay: true,
     fade: true
   });
+
+  $('.detalis-slide__min').slick({
+    asNavFor: '.detalis-slide__max',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    focusOnSelect: true,
+    vertical: true,
+    draggable: false
+  });
+
+  $('.detalis-slide__max').slick({
+    asNavFor: '.detalis-slide__min',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
+  $('.related__slider').slick({
+    arrows: true,
+    dots: false,
+    autoplay: true,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    infinite: true,
+    prevArrow: '<button class="slick-btn slick-prev"><img src="images/icons/slider-arrow-left.svg"></button>',
+    nextArrow: '<button class="slick-btn slick-next"><img src="images/icons/slider-arrow-right.svg"></button>'
+  });
+
+  $('.detalis-one__item-num').styler();
 
   $('.filter-star').rateYo({
     starWidth: "11px",
