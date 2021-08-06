@@ -86,7 +86,3 @@ $(function () {
 
 });
 
-
-
-
-//  config
