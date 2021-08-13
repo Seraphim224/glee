@@ -1,5 +1,9 @@
 $(function () {
 
+  $('.menu__btn').on('click', function () {
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
   $('.detalis-tabs__top-item').on('click', function (e) {
     e.preventDefault();
     $('.detalis-tabs__top-item').removeClass('detalis-tabs__top-item--active');
@@ -7,6 +11,10 @@ $(function () {
 
     $('.detalis-tabs__content-item').removeClass('detalis-tabs__content-item--active');
     $($(this).attr('href')).addClass('detalis-tabs__content-item--active');
+  });
+
+  $('.product-filter__button').on('click', function () {
+    $('.product-filter').slideToggle();
   });
 
   $('.filter-price__input').ionRangeSlider({
@@ -53,7 +61,27 @@ $(function () {
     slidesToScroll: 2,
     infinite: true,
     prevArrow: '<button class="slick-btn slick-prev"><img src="images/icons/slider-arrow-left.svg"></button>',
-    nextArrow: '<button class="slick-btn slick-next"><img src="images/icons/slider-arrow-right.svg"></button>'
+    nextArrow: '<button class="slick-btn slick-next"><img src="images/icons/slider-arrow-right.svg"></button>',
+     responsive: [
+    {
+      breakpoint: 1160,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 867,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 586,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+  ]
   });
 
   $('.detalis-one__item-num').styler();
